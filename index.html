@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Payment Successful</title>
+  <style>
+    /* === Base Page Setup === */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #bfe8fa; /* light blue background */
+      font-family: "Poppins", Arial, sans-serif;
+      color: #0f172a;
+      text-align: center;
+    }
 
+    /* === Success Circle + Tick === */
+    .success-icon {
+      width: 130px;
+      height: 130px;
+      border: 6px solid #16a34a;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+      background-color: white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      animation: pop 0.5s ease-out forwards;
+    }
+
+    .success-icon svg {
+      width: 70px;
+      height: 70px;
+    }
+
+    /* === Text Section === */
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    /* === Animation === */
+    @keyframes pop {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes draw {
+      from { stroke-dashoffset: 100; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    .check {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: draw 0.7s ease forwards 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-icon">
+    <svg viewBox="0 0 52 52">
+      <path class="check" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-16"></path>
+    </svg>
+  </div>
+
+  <h1>Online Payment Successful</h1>
+  <p>Thank you! Your transaction has been completed.</p>
+</body>
+</html>
